@@ -10,11 +10,24 @@ body{
 	text-decoration: none;
 	box-sizing: border-box;
 }
+#footerhtml{
+	width: 100%;
+	min-height: 1485px;
+	display: block;
+}
+#en-footerhtml{
+	width: 100%;
+	min-height: 1539px;
+	display: block;
+}
 /*  英文版样式补充*/
+.en-bottonbanner{
+	background-image: url(../images/en-bottombanner.jpg) !important;
+}
 .EN-header{
 	position: relative;
-	background-image:url(../images/new-banner.jpg); 
-	height: 500px;
+	background-image:url(../images/en-index-banner.jpg); 
+	height: 779px;
 	width: 100%;
 	overflow: hidden;
 	background-repeat: no-repeat;
@@ -781,7 +794,7 @@ section{
 	display: none;
 }
 #guide-page.guide-page{
-	background-image :url(../images/banner-fu-en.jpg);
+	background-image :url(../images/en-banner.jpg);
 }
 
 /* 主页完 */
@@ -790,7 +803,7 @@ section{
 #guide-page{
 	width: 100%;
 	height: 298px;
-	background-image: url(../images/banner-fu.jpg);
+	background-image: url(../images/ch-banner.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
     background-size: 1922px 300px;
@@ -1406,10 +1419,10 @@ section{
 	margin-top: 0;
 }
 .header{
-	height: 500px;
+	height: 779px;
 	width: 100%;
 	overflow: hidden;
-	background-image: url(../images/newbanner-china.jpg);
+	background-image: url(../images/ch-index-banner.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
     background-size: 1922px 779px;
@@ -1687,7 +1700,17 @@ table {
 
 /* 移动 */
 /* 修改移动版 */
+
 @media(max-width: 900px){
+	#footer-top-three h5:nth-of-type(1){
+		margin-top: 30px;
+	}
+	#footerhtml{
+		min-height: 2122px;
+	}
+	#en-footerhtml{
+		min-height: 2095px;
+	}
 	.schedule-page-position p:nth-of-type(1){
 		font-size: 12px;
 		letter-spacing: -1px;
@@ -2078,7 +2101,74 @@ table {
 		padding: 30px;
 	}
 }
+@media(max-height: 752px){
+	#en-footerhtml{
+		min-height: 2122px;
+	}
+}
+@media(max-width: 556px){
+	#footerhtml{
+		min-height: 2149px;
+	}
+}
 @media(max-width: 320px){
+	#en-footerhtml{
+		min-height: 3154px;
+	}
+}
+@media(max-width: 405px){
+	#en-footerhtml{
+		
+		min-height: 2716px;
+		
+	}
+}
+@media(max-width: 375px){
+	#en-footerhtml{
+	
+		min-height: 2797px;
+		
+	}
+}
+@media(max-width: 414px){
+	#en-footerhtml{
+	
+		min-height: 2662px;
+		
+	}
+}
+@media(max-width: 438px){
+	#en-footerhtml{
+		min-height: 2527px;
+	}
+}
+@media(max-width: 540px){
+	#footerhtml{
+		width: 100%;
+		min-height: 2149px;
+		display: block;
+	}
+}
+@media(max-width:335px){
+	#footerhtml{
+		width: 100%;
+		min-height: 2276px;
+		display: block;
+	}
+}
+@media(max-width:373px){
+	#footerhtml{
+		width: 100%;
+		min-height: 2176px;
+		display: block;
+	}
+}
+@media(max-width: 400px){
+	#footerhtml{
+		width: 100%;
+		min-height: 2336px;
+		display: block;
+	}
 	#schedule-page-table .timetdTwo,#schedule-page-table .timetdOne{
 		padding: 0;
 		font-size: 10px;
