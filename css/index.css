@@ -1428,6 +1428,24 @@ section{
     background-size: 1922px 779px;
 	
 }
+@media(max-width: 1366px){
+	.header,.EN-header{
+		height: 519px;
+		background-size: 1366px;
+	}
+}
+@media(max-width: 1280px){
+	.header,.EN-header{
+		height:500px;
+		background-size: 1255px;
+	}
+}
+@media(max-width: 1024px){
+	.header,.EN-header{
+		height:400px;
+		background-size: 1000px;
+	}
+}
 .activity{
     width: auto;
     margin: auto;
