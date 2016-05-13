@@ -94,7 +94,7 @@ section.ENsection{
     margin: 0 auto;
 }
 #banner-bottom-inner ul li{
-	width: 33.3%;
+	width: 20%;
 	height: 150px;
 	float: left;
 	text-align: center;
@@ -1433,17 +1433,27 @@ section{
 		height: 519px;
 		background-size: 1366px;
 	}
+	#nav ul li{
+		margin: 21px 5px;
+	}
 }
 @media(max-width: 1280px){
 	.header,.EN-header{
 		height:500px;
 		background-size: 1255px;
 	}
+	#nav ul li{
+		margin: 21px 0px;
+	}
 }
 @media(max-width: 1024px){
 	.header,.EN-header{
 		height:400px;
 		background-size: 1000px;
+	}
+	#nav ul li{
+		margin: 21px 0px;
+		padding: 5px 13px;
 	}
 }
 .activity{
