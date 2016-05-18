@@ -7,30 +7,6 @@ $(function(){
 			$("#menu-list").slideUp();
 		}
 	});
-	/*$('#menu-list li').click(function(){
-		$('#menu-list').css({display:'none'})
-	})*/
-	/*楼层跳转*/
-	/*var M = $('#header-right-list li').not($('#header-right-list li').filter(function(){
-		return $(this).hasClass('index');
-	}));
-	$(M).each(function(i){
-		$(this).click(function(){
-			var N = $('.floors').eq(i).offset().top;
-			$('body').animate({scrollTop:N})
-			$(document.documentElement).animate({scrollTop:N})
-		})
-	})
-	var A = $('#menu-list li').not($('#menu-list li').filter(function(){
-		return $(this).hasClass('index');
-	}));
-	$(A).each(function(i){
-		$(this).click(function(){
-			var N = $('.floors').eq(i).offset().top;
-			$('body').animate({scrollTop:N})
-			$(document.documentElement).animate({scrollTop:N})
-		})
-	})*/
 	/*返回顶部*/
 	$(window).scroll(function(){
 		if($(window).scrollTop()>100){
@@ -118,146 +94,191 @@ $(function(){
 	},function(){
 		$(this).find("#Participants-list").slideDown();
 	})
-	/*嘉宾合作伙伴轮播*/
-		/*var jiabin = $('.distinguished-gues-bottom-bigbox');
-		var btn = $('#btns ul li');
-		var index = 0;
-		function lunbo(type){
-			if(type=='r'){
-				index++;
-				if(index>=jiabin.length){
-					index = 0; 
-				}
+/*合作伙伴轮播*/
+	var logos = $('.Partne-logos-box');
+	var logosbtn = $('#btns2 ul li');
+	var index2 = 0;
+	function logo(type2){
+		if(type2=='r'){
+			index2++;
+			if(index2>=logos.length){
+				index2 = 0; 
 			}
-			else if(type=='l'){
-				index--;
-				if(index<=-1){
-					index=jiabin.length-1;
-				}
-			}
-			jiabin.hide();
-			jiabin.eq(index).fadeIn();
-			btn.css({background:'#757474'})
-			btn.eq(index).css({background:'#2a2a2a'})
 		}
-		var t = setInterval(function(){
-			lunbo('r')
-		},3000);
-		$('#distinguished-gues-bottom').hover(function(){
-			clearInterval(t);
-		},function(){
-			t=setInterval(function(){
-				lunbo('r')
-			},3000)
-		})
-		$('#arrow-left').click(function(){
-			lunbo('l');
-		})
-		$('#arrow-right').click(function(){
-			lunbo('r');
-		})
-		btn.click(function(){
-			var index1=$(this).index();
-			jiabin.hide();
-			jiabin.eq(index1).fadeIn();
-			btn.css({background:"#757474"});
-			btn.eq(index1).css({background:"#2a2a2a"});
-  	 		index=$(this).index();
-		})*/
-		/*合作伙伴轮播*/
-
-
-
-		var logos = $('.Partne-logos-box');
-		var logosbtn = $('#btns2 ul li');
-		var index2 = 0;
-		function logo(type2){
-			if(type2=='r'){
-				index2++;
-				if(index2>=logos.length){
-					index2 = 0; 
-				}
+		else if(type2=='l'){
+			index2--;
+			if(index2<=-1){
+				index2=logos.length-1;
 			}
-			else if(type2=='l'){
-				index2--;
-				if(index2<=-1){
-					index2=logos.length-1;
-				}
-			}
-			logos.hide();
-			logos.eq(index2).fadeIn();
-			logosbtn.css({background:'#757474'})
-			logosbtn.eq(index2).css({background:'#2a2a2a'})
 		}
-		var t2 = setInterval(function(){
+		logos.hide();
+		logos.eq(index2).fadeIn();
+		logosbtn.css({background:'#757474'})
+		logosbtn.eq(index2).css({background:'#2a2a2a'})
+	}
+	var t2 = setInterval(function(){
+		logo('r')
+	},3250);
+	$('#Partne-logo').hover(function(){
+		clearInterval(t2);
+	},function(){
+		t2=setInterval(function(){
 			logo('r')
-		},3250);
-		$('#Partne-logo').hover(function(){
-			clearInterval(t2);
+		},3250)
+	})
+	$('#arrow-left2').click(function(){
+		logo('l');
+	})
+	$('#arrow-right2').click(function(){
+		logo('r');
+	})
+	logosbtn.click(function(){
+		var index3=$(this).index();
+		logos.hide();
+		logos.eq(index3).fadeIn();
+		logosbtn.css({background:"#757474"});
+		logosbtn.eq(index3).css({background:"#2a2a2a"});
+	 		index2=$(this).index();
+	})
+/*演讲嘉宾*/
+	var jiabin = $('.Guest-Speaker');
+	var btn = $('.btns ul li');
+	var index = 0;
+	function lunbo(type){
+		if(type=='r'){
+			index++;
+			if(index>=jiabin.length){
+				index = 0; 
+			}
+		}
+		else if(type=='l'){
+			index--;
+			if(index<=-1){
+				index=jiabin.length-1;
+			}
+		}
+		jiabin.hide();
+		jiabin.eq(index).fadeIn();
+		btn.css({background:'#757474'})
+		btn.eq(index).css({background:'#2a2a2a'})
+	}
+	var t = setInterval(function(){
+		lunbo('r')
+	},3000);
+	$('#distinguished-gues-bottom').hover(function(){
+		clearInterval(t);
+	},function(){
+		t=setInterval(function(){
+			lunbo('r')
+		},3000)
+	})
+	$('#arrow-left').click(function(){
+		lunbo('l');
+	})
+	$('#arrow-right').click(function(){
+		lunbo('r');
+	})
+	btn.click(function(){
+		var index1=$(this).index();
+		jiabin.hide();
+		jiabin.eq(index1).fadeIn();
+		btn.css({background:"#757474"});
+		btn.eq(index1).css({background:"#2a2a2a"});
+	 	index=$(this).index();
+	})
+/*演讲嘉宾移动*/
+	var jiabinMin = $('.Guest-Speaker-min');
+	var btnMin = $('.btns-min ul li');
+	var index3 = 0;
+	function lunbomin(type3){
+		if(type3=='r'){
+			index3++;
+			if(index3>=jiabinMin.length){
+				index3 = 0; 
+			}
+		}
+		else if(type3=='l'){
+			index3--;
+			if(index3<=-1){
+				index3=jiabinMin.length-1;
+			}
+		}
+		jiabinMin.hide();
+		jiabinMin.eq(index3).fadeIn();
+		btnMin.css({background:'#757474'})
+		btnMin.eq(index3).css({background:'#2a2a2a'})
+	}
+	var min = setInterval(function(){
+		lunbomin('r')
+	},3000);
+	$('#distinguished-gues-bottom-min').hover(function(){
+		clearInterval(min);
+	},function(){
+		min=setInterval(function(){
+			lunbomin('r')
+		},3000)
+	})
+	$('.arrow-left-min').click(function(){
+		lunbomin('l');
+	})
+	$('.arrow-right-min').click(function(){
+		lunbomin('r');
+	})
+	btnMin.click(function(){
+		var index4=$(this).index();
+		jiabinMin.hide();
+		jiabinMin.eq(index4).fadeIn();
+		btnMin.css({background:"#757474"});
+		btnMin.eq(index4).css({background:"#2a2a2a"});
+	 	index=$(this).index();
+	})
+/*演讲嘉宾完*/
+/*大会议程下拉*/
+	$('.timetdTwo-click').each(function(i,v){
+		$(v).click(function(){
+			if($('.schedule-guests').eq(i).css('display')=='none'){
+				$('.schedule-guests').eq(i).stop();
+				$('.schedule-guests').eq(i).fadeIn();
+				$('.triangle').eq(i).css('background-image','url(../images/zhengsanjiao.png)');
+			}else{
+				$('.schedule-guests').eq(i).stop();
+				$('.schedule-guests').eq(i).fadeOut();
+				$('.triangle').eq(i).css('background-image','url(../images/daosanjiao.png)');
+			}
+		})
+	})
+	$('.name').each(function(i,v){
+		$(v).hover(function(){
+			$('.jiabinkuang').eq(i).stop();
+			$('.jiabinkuang').eq(i).fadeIn();
 		},function(){
-			t2=setInterval(function(){
-				logo('r')
-			},3250)
+			$('.jiabinkuang').eq(i).stop();
+			$('.jiabinkuang').eq(i).fadeOut();
 		})
-		$('#arrow-left2').click(function(){
-			logo('l');
-		})
-		$('#arrow-right2').click(function(){
-			logo('r');
-		})
-		logosbtn.click(function(){
-			var index3=$(this).index();
-			logos.hide();
-			logos.eq(index3).fadeIn();
-			logosbtn.css({background:"#757474"});
-			logosbtn.eq(index3).css({background:"#2a2a2a"});
-  	 		index2=$(this).index();
-		})
-
-
-
-
-
-
-
-
-		
-	/*大会议程下拉*/
-		$('.timetdTwo-click').each(function(i,v){
-			$(v).click(function(){
-				if($('.schedule-guests').eq(i).css('display')=='none'){
-					$('.schedule-guests').eq(i).stop();
-					$('.schedule-guests').eq(i).fadeIn();
-					$('.triangle').eq(i).css('background-image','url(../images/zhengsanjiao.png)');
-				}else{
-					$('.schedule-guests').eq(i).stop();
-					$('.schedule-guests').eq(i).fadeOut();
-					$('.triangle').eq(i).css('background-image','url(../images/daosanjiao.png)');
-				}
-			})
-		})
-		$('.name').each(function(i,v){
-			$(v).hover(function(){
-				$('.jiabinkuang').eq(i).stop();
-				$('.jiabinkuang').eq(i).fadeIn();
-			},function(){
-				$('.jiabinkuang').eq(i).stop();
-				$('.jiabinkuang').eq(i).fadeOut();
-			})
-		})
-		$('.schedule-page-position').click(function(){
-			$('.schedule-page-position-map').slideDown();
-		})
-		$('.ditu').click(function(e){
-			$('.schedule-page-position-map').slideUp();
-			e.stopPropagation();
-		})
-		/*底部二维码*/
-		$('#weixin').hover(function(){
-			$('#weixin .erweima').stop();
-			$('#weixin .erweima').fadeIn();
-		},function(){
-			$('#weixin .erweima').stop();
-			$('#weixin .erweima').fadeOut();
-		})
+	})
+	$('.schedule-page-position').click(function(){
+		$('.schedule-page-position-map').slideDown();
+	})
+	$('.ditu').click(function(e){
+		$('.schedule-page-position-map').slideUp();
+		e.stopPropagation();
+	})
+	/*底部二维码*/
+	$('#weixin').hover(function(){
+		$('#weixin .erweima').stop();
+		$('#weixin .erweima').fadeIn();
+	},function(){
+		$('#weixin .erweima').stop();
+		$('#weixin .erweima').fadeOut();
+	})
+/*移动顶部nav*/
+	$(".list-logo").click(function(){
+		if($("#nav").css("display")=="none"){
+			$(".list-logo").animate({"right":170},500);
+			$("#nav").fadeIn(500);
+		}else{
+			$(".list-logo").animate({"right":20},500);
+			$("#nav").fadeOut(500);
+		}	
+	})
 })
