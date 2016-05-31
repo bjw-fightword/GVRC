@@ -281,4 +281,34 @@ $(function(){
 			$("#nav").fadeOut(500);
 		}	
 	})
+/*演讲嘉宾详细资料*/
+	$(".distinguished-gues-bottom-box>div").each(function(i,v){
+		$(v).hover(function(){
+			if($(".Guest-introduction").eq(i).css("display")=="none"){
+				$(".Guest-introduction").eq(i).stop();
+				$(".Guest-introduction").eq(i).fadeIn();
+				$(".Guest-introduction").eq(i).css({boxShadow:"0px 15px 30px rgba(0,0,0,0.1)",transition:"all 0.5s ease"})
+			}
+			/*else{
+				$(".Guest-introduction").eq(i).stop();
+				$(".Guest-introduction").eq(i).css("display","none");
+			}*/
+		})
+	})
+	$(".Guest-introduction span").each(function(i,v){
+		$(v).click(function(){
+			if($(".Guest-introduction").eq(i).css("display")=="block"){
+			$(".Guest-introduction").css("display","none");
+			}
+		})
+	})
+	$(".Guest-Speaker-min .distinguished-gues-bottom-box>div").each(function(i,v){
+		$(v).click(function(){
+			if($(".Guest-introduction").eq(i).css("display")=="none"){
+				$(".Guest-introduction").eq(i).stop();
+				$(".Guest-introduction").eq(i).fadeIn();
+				$(".Guest-introduction").eq(i).css({boxShadow:"0px 15px 30px rgba(0,0,0,0.1)",transition:"all 0.5s ease"})
+			}
+		})
+	})
 })

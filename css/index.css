@@ -188,7 +188,59 @@ section{
 	height: 840px;
 	background: #aeaeae;
 	margin-top: -80px;
+	position: relative;
 }
+
+/* 嘉宾资料 */
+.Guest-introduction{
+	width: 600px !important;
+	height: 800px;
+	margin: auto;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(255,255,255,1);
+	display: none;
+	color: #1a1a1a;
+	padding: 30px;
+	transition:all 0.5s ease;
+}
+
+.Guest-introduction span{
+	position: absolute;
+	display: block;
+	right: 20px;
+	top: 20px;
+	cursor: pointer;
+}
+.Guest-introduction .distinguished-gues-bottom-box h3,.Guest-introduction .distinguished-gues-bottom-box p{
+	color: #1a1a1a !important;
+	float: none;
+}
+.Guest-introduction .distinguished-gues-bottom-box{
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+} 
+.Guest-introduction .distinguished-gues-bottom-box>div{
+	float: left;
+}
+.Guest-introduction textarea{
+	width: 100%;
+	height: 70%;
+	display:block;
+	border: none;
+	font-size:16px;
+	line-height: 25px;
+	text-align: justify;
+	font-family: "微软雅黑";
+	background: #fff;
+}
+
+
+
 #distinguished-gues-top{
 	width: 100%;
 	height: 100px;
@@ -217,6 +269,7 @@ section{
 	padding: 40px 0 0 0;
 	text-align: center;
 	float: left;
+	cursor: pointer;
 }
 .distinguished-gues-bottom-box div{
 	margin: 0 auto;	
@@ -321,29 +374,57 @@ section{
 .distinguished-gues-bottom-box div#distinguished-gues-26{
 	background-image: url(../images/img/126.png);
 }
-
-
-
-
-
-
-
-
+.distinguished-gues-bottom-box div#distinguished-gues-28{
+	background-image: url(../images/img/28.png);
+}
+.distinguished-gues-bottom-box div#distinguished-gues-29{
+	background-image: url(../images/img/30.png);
+}
+.distinguished-gues-bottom-box div#distinguished-gues-30{
+	background-image: url(../images/img/29.png);
+}
+.distinguished-gues-bottom-box div#distinguished-gues-31{
+	background-image: url(../images/img/32.png);
+}
+.distinguished-gues-bottom-box div#distinguished-gues-32{
+	background-image: url(../images/img/31.png);
+}
+.distinguished-gues-bottom-box div#distinguished-gues-33{
+	background-image: url(../images/img/34.png);
+}
+.distinguished-gues-bottom-box div#distinguished-gues-34{
+	background-image: url(../images/img/33.png);
+}
+.distinguished-gues-bottom-box div#distinguished-gues-36{
+	background-image: url(../images/img/36.png);
+}
+.distinguished-gues-bottom-box div#distinguished-gues-37{
+	background-image: url(../images/img/37.png);
+}
+.distinguished-gues-bottom-box div#distinguished-gues-38{
+	background-image: url(../images/img/38.png);
+}
+.distinguished-gues-bottom-box div#distinguished-gues-39{
+	background-image: url(../images/img/39.png);
+}
+.distinguished-gues-bottom-box div#distinguished-gues-40{
+	background-image: url(../images/img/40.png);
+}
 #btns{
-	width: 130px;
+	width: 156px;
 	height: 50px;
 	position: absolute;
 	bottom: -80px;
 	left: 50%;
-	margin-left: -65px;
+	margin-left: -78px;
 }
 #btns2{
-	width: 220px;
+	width: 286px;
 	height: 50px;
 	position: absolute;
 	bottom: -40px;
 	left: 50%;
-	margin-left: -110px;
+	margin-left: -143px;
 }
 #btns ul li,#btns2 ul li{
 	width: 10px;
@@ -404,7 +485,7 @@ section{
 	background-image: url(../images/Cooperative/01.png);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 85%;
+	background-size: 70%;
 }
 #Partne-logo-02{
 	width: 	100%;
@@ -580,10 +661,7 @@ section{
 	background-image: url(../images/Cooperative/22.png);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 25%;
-	-moz-transform:rotate(90deg); 
-	-webkit-transform:rotate(90deg);
-	transform:rotate(90deg);
+	background-size: 50%;
 }
 #Partne-logo-23{
 	width: 	100%;
@@ -805,6 +883,153 @@ section{
 	background-position: center;
 	background-size: 50%;
 }
+#Partne-logo-49{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/49.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50%;
+}
+#Partne-logo-50{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/50.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:50%;
+}
+#Partne-logo-51{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/51.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70%;
+}
+#Partne-logo-52{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/52.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50%;
+}
+#Partne-logo-53{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/53.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50%;
+}
+#Partne-logo-54{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/54.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 60%;
+}
+#Partne-logo-55{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/55.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50%;
+}
+#Partne-logo-56{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/56.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70%;
+}
+#Partne-logo-57{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/57.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50%;
+}
+#Partne-logo-58{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/58.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 40%;
+}
+#Partne-logo-59{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/59.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 60%;
+}
+#Partne-logo-60{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/60.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 60%;
+}
+#Partne-logo-61{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/61.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 60%;
+}
+#Partne-logo-62{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/62.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:70%;
+}
+#Partne-logo-63{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/63.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 60%;
+}
+#Partne-logo-64{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/64.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 35%;
+}
+#Partne-logo-65{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/65.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30%;
+}
+#Partne-logo-66{
+	width: 	100%;
+	height: 100%; 
+	background-image: url(../images/Cooperative/66.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 60%;
+}
+
+
+
 
 
 
@@ -2016,12 +2241,12 @@ table {
 	display: block;
 }
 #distinguished-gues-bottom-min #btns-min{
-	width: 184px;
+	width: 234px;
     height: 50px;
     position: absolute;
     bottom: -140px;
     left: 50%;
-    margin-left: -92px;
+    margin-left: -117px;
 }
 #distinguished-gues-bottom-min #btns-min ul li{
 	width: 10px;
@@ -2036,6 +2261,21 @@ table {
 	background: #2a2a2a;
 }
 @media(max-width: 900px){
+	/* 嘉宾详细资料 */
+	.Guest-introduction{
+		width: 300px !important;
+		height: 560px;
+		padding: 15px;
+	}
+	.Guest-introduction textarea{
+		font-size:12px;
+		line-height: 20px;
+		height: 60%;
+		color: rgba(26,26,26,0.9);
+	}
+
+	/* 嘉宾详细资料 */
+
 	#distinguished-gues-bottom-min{
 		display: block;
 	}
@@ -2143,6 +2383,7 @@ table {
 		right:45px;
 	}
 	#Partne{
+		margin-top: -40px;
 		height: 250px;
 	}
 	#Partne-logo{
